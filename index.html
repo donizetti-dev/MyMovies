@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyMovies</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- ===== TELA DE LOGIN ===== -->
+    <div id="telaLogin">
+      <div class="login-card">
+        <div class="login-logo">
+          <span class="logo-icon">🎬</span>
+          <h1>MyMovies</h1>
+          <p>Sua lista de filmes para assistir</p>
+        </div>
+
+        <form id="formLogin" onsubmit="fazerLogin(event)">
+          <div class="campo">
+            <label for="usuario">Usuário</label>
+            <input
+              type="text"
+              id="usuario"
+              placeholder="Digite seu usuário"
+              autocomplete="username"
+            />
+          </div>
+
+          <div class="campo">
+            <label for="senha">Senha</label>
+            <input
+              type="password"
+              id="senha"
+              placeholder="Digite sua senha"
+              autocomplete="current-password"
+            />
+          </div>
+
+          <p id="erroLogin" class="mensagem-erro"></p>
+
+          <button type="submit" class="btn btn-primario btn-bloco">
+            Entrar
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ===== TELA PRINCIPAL (CRUD) ===== -->
+    <div id="telaPrincipal" class="oculto">
+
+      <!-- Cabeçalho -->
+      <header class="cabecalho">
+        <div class="cabecalho-conteudo">
+          <div class="cabecalho-logo">
+            <span class="logo-icon">🎬</span>
+            <h1>MyMovies</h1>
+          </div>
+          <button class="btn btn-sair" onclick="fazerLogout()">Sair</button>
+        </div>
+      </header>
+
+      <!-- Conteúdo principal -->
+      <main class="conteudo">
+
+        <!-- Seção de adição de filmes -->
+        <section class="secao-adicionar">
+          <h2>Adicionar Filme</h2>
+
+          <div class="grupo-input">
+            <input
+              type="text"
+              id="inputFilme"
+              placeholder="Digite o nome do filme..."
+              maxlength="100"
+            />
+            <p id="erroFilme" class="mensagem-erro"></p>
+          </div>
+
+          <div class="grupo-botoes">
+            <button class="btn btn-primario" onclick="adicionarNoFinal()">
+              + Adicionar ao Final
+            </button>
+            <button class="btn btn-secundario" onclick="adicionarNoInicio()">
+              + Adicionar ao Início
+            </button>
+          </div>
+        </section>
+
+        <!-- Seção da lista de filmes -->
+        <section class="secao-lista">
+          <div class="lista-cabecalho">
+            <h2>Minha Lista</h2>
+            <span id="contadorFilmes" class="contador"></span>
+          </div>
+
+          <ul id="listaFilmes"></ul>
+        </section>
+
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

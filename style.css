@@ -1,0 +1,487 @@
+/* =============================================
+   RESET E BASE
+   ============================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0d0d0d;
+  color: #f0f0f0;
+  min-height: 100vh;
+}
+
+/* =============================================
+   UTILITÁRIOS
+   ============================================= */
+.oculto {
+  display: none !important;
+}
+
+.mensagem-erro {
+  color: #ff4d4d;
+  font-size: 0.85rem;
+  min-height: 1.2rem;
+  margin-top: 6px;
+}
+
+/* =============================================
+   BOTÕES
+   ============================================= */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primario {
+  background-color: #e50914;
+  color: #ffffff;
+}
+
+.btn-primario:hover {
+  background-color: #c1070f;
+}
+
+.btn-secundario {
+  background-color: #333333;
+  color: #f0f0f0;
+  border: 1px solid #555555;
+}
+
+.btn-secundario:hover {
+  background-color: #444444;
+}
+
+.btn-bloco {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+.btn-sair {
+  background-color: transparent;
+  color: #aaaaaa;
+  border: 1px solid #444444;
+  padding: 7px 16px;
+  font-size: 0.85rem;
+}
+
+.btn-sair:hover {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+/* =============================================
+   LOGO
+   ============================================= */
+.logo-icon {
+  font-size: 2.5rem;
+}
+
+/* =============================================
+   TELA DE LOGIN
+   ============================================= */
+#telaLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a2e 100%);
+}
+
+.login-card {
+  background-color: #1a1a1a;
+  border: 1px solid #2e2e2e;
+  border-radius: 16px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+.login-logo {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-logo h1 {
+  font-size: 2rem;
+  color: #e50914;
+  margin-top: 8px;
+  letter-spacing: 1px;
+}
+
+.login-logo p {
+  color: #888888;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.campo {
+  margin-bottom: 18px;
+}
+
+.campo label {
+  display: block;
+  font-size: 0.85rem;
+  color: #aaaaaa;
+  margin-bottom: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.campo input {
+  width: 100%;
+  padding: 11px 14px;
+  background-color: #252525;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  color: #f0f0f0;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.campo input:focus {
+  border-color: #e50914;
+}
+
+.campo input::placeholder {
+  color: #555555;
+}
+
+/* =============================================
+   CABEÇALHO DA TELA PRINCIPAL
+   ============================================= */
+.cabecalho {
+  background-color: #141414;
+  border-bottom: 1px solid #2e2e2e;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.cabecalho-conteudo {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cabecalho-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cabecalho-logo .logo-icon {
+  font-size: 1.6rem;
+}
+
+.cabecalho-logo h1 {
+  font-size: 1.5rem;
+  color: #e50914;
+  letter-spacing: 1px;
+}
+
+/* =============================================
+   CONTEÚDO PRINCIPAL
+   ============================================= */
+.conteudo {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* =============================================
+   SEÇÃO ADICIONAR FILME
+   ============================================= */
+.secao-adicionar {
+  background-color: #1a1a1a;
+  border: 1px solid #2e2e2e;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.secao-adicionar h2 {
+  font-size: 1.1rem;
+  color: #cccccc;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+.grupo-input input {
+  width: 100%;
+  padding: 11px 14px;
+  background-color: #252525;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  color: #f0f0f0;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.grupo-input input:focus {
+  border-color: #e50914;
+}
+
+.grupo-input input::placeholder {
+  color: #555555;
+}
+
+.grupo-botoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.grupo-botoes .btn {
+  flex: 1;
+  min-width: 160px;
+}
+
+/* =============================================
+   SEÇÃO LISTA DE FILMES
+   ============================================= */
+.secao-lista {
+  background-color: #1a1a1a;
+  border: 1px solid #2e2e2e;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.lista-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.lista-cabecalho h2 {
+  font-size: 0.9rem;
+  color: #cccccc;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contador {
+  background-color: #e50914;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* Lista */
+#listaFilmes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Item da lista — modo visualização */
+.item-filme {
+  background-color: #252525;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: border-color 0.2s;
+}
+
+.item-filme:hover {
+  border-color: #555555;
+}
+
+.item-numero {
+  color: #555555;
+  font-size: 0.8rem;
+  font-weight: 700;
+  min-width: 24px;
+  text-align: center;
+}
+
+.item-nome {
+  flex: 1;
+  font-size: 1rem;
+  color: #f0f0f0;
+  word-break: break-word;
+}
+
+.item-acoes {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.btn-editar {
+  background-color: #2a4a7f;
+  color: #a8c4f0;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-editar:hover {
+  background-color: #3a5f9f;
+}
+
+.btn-remover {
+  background-color: #4a1a1a;
+  color: #f08080;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-remover:hover {
+  background-color: #6a2a2a;
+}
+
+/* Item da lista — modo edição */
+.item-filme.modo-edicao {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  border-color: #e50914;
+}
+
+.edicao-topo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.edicao-label {
+  font-size: 0.78rem;
+  color: #e50914;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input-edicao {
+  width: 100%;
+  padding: 9px 12px;
+  background-color: #1a1a1a;
+  border: 1px solid #555555;
+  border-radius: 7px;
+  color: #f0f0f0;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-edicao:focus {
+  border-color: #e50914;
+}
+
+.edicao-botoes {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.btn-confirmar {
+  background-color: #1a4a1a;
+  color: #80f080;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-confirmar:hover {
+  background-color: #2a6a2a;
+}
+
+.btn-cancelar {
+  background-color: #333333;
+  color: #aaaaaa;
+  border: 1px solid #555555;
+  border-radius: 6px;
+  padding: 7px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-cancelar:hover {
+  background-color: #444444;
+}
+
+.erro-edicao {
+  color: #ff4d4d;
+  font-size: 0.82rem;
+  min-height: 1rem;
+}
+
+/* Lista vazia */
+.lista-vazia {
+  text-align: center;
+  padding: 32px 16px;
+  color: #555555;
+  font-size: 0.95rem;
+}
+
+/* =============================================
+   RESPONSIVIDADE
+   ============================================= */
+@media (max-width: 500px) {
+  .login-card {
+    padding: 28px 20px;
+  }
+
+  .conteudo {
+    padding: 20px 16px;
+  }
+
+  .grupo-botoes {
+    flex-direction: column;
+  }
+
+  .item-acoes {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
