@@ -4,8 +4,8 @@
 
 var filmes = ["O Poderoso Chefão", "Interestelar", "Parasita"];
 
-var USUARIO_CORRETO = "aluno";
-var SENHA_CORRETA = "fiap2025";
+const USUARIO_CORRETO = "aluno";
+const SENHA_CORRETA = "fiap2025";
 
 // =============================================
 // FUNÇÕES DE LOGIN
